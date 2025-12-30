@@ -1,6 +1,7 @@
 import React from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { colors } from '../constants/colors';
+import { typography } from '../constants/typography';
 
 export default function ProductCard({ product }) {
   return (
@@ -22,11 +23,13 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     padding: 12,
     marginBottom: 14,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 6 },
-    shadowOpacity: 0.08,
-    shadowRadius: 12,
-    elevation: 2,
+    borderWidth: 1,
+    borderColor: colors.border,
+    shadowColor: '#0b3a42',
+    shadowOffset: { width: 0, height: 8 },
+    shadowOpacity: 0.05,
+    shadowRadius: 14,
+    elevation: 1,
     flexBasis: '48%',
   },
   image: {
@@ -44,13 +47,13 @@ const styles = StyleSheet.create({
     gap: 4,
   },
   name: {
-    fontWeight: '700',
-    color: colors.text,
+    ...typography.body,
+    fontFamily: 'Inter_600SemiBold',
+    color: colors.textPrimary,
     fontSize: 15,
-    lineHeight: 20,
   },
   price: {
-    color: colors.mutedText,
-    fontWeight: '600',
+    ...typography.price,
+    color: colors.textMuted,
   },
 });

@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Pressable } from 'react-native';
 import { colors } from '../constants/colors';
+import { typography } from '../constants/typography';
 
 export default function Header() {
   return (
@@ -25,10 +26,9 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   brand: {
-    fontSize: 24,
-    fontWeight: '800',
-    color: colors.text,
-    letterSpacing: 0.5,
+    ...typography.heading,
+    fontSize: 26,
+    color: colors.textPrimary,
   },
   iconRow: {
     flexDirection: 'row',

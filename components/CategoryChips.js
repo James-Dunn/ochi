@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ScrollView, Pressable, Text, StyleSheet, View } from 'react-native';
 import { colors } from '../constants/colors';
+import { typography } from '../constants/typography';
 
 export default function CategoryChips({ categories }) {
   const [active, setActive] = useState(categories?.[0]);
@@ -39,23 +40,24 @@ const styles = StyleSheet.create({
     paddingRight: 6,
   },
   chip: {
-    backgroundColor: '#eef2ff',
+    backgroundColor: '#e0efed',
     paddingVertical: 10,
     paddingHorizontal: 14,
     borderRadius: 999,
     borderWidth: 1,
-    borderColor: '#e0e7ff',
+    borderColor: '#c8dbd8',
   },
   activeChip: {
-    backgroundColor: colors.text,
-    borderColor: colors.text,
+    backgroundColor: colors.primary,
+    borderColor: colors.primaryDark,
   },
   label: {
-    fontWeight: '600',
-    color: colors.text,
-    letterSpacing: 0.2,
+    ...typography.label,
+    color: colors.textPrimary,
+    fontSize: 12,
   },
   activeLabel: {
-    color: '#ffffff',
+    color: colors.buttonText,
+    fontFamily: 'Inter_600SemiBold',
   },
 });
