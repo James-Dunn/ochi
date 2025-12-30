@@ -10,6 +10,7 @@ import Header from '../components/Header';
 import CategoryChips from '../components/CategoryChips';
 import ProductCard from '../components/ProductCard';
 import { colors } from '../constants/colors';
+import { typography } from '../constants/typography';
 
 const categories = ['Tees', 'New', 'Best Sellers', 'Sale', 'Essentials'];
 
@@ -66,19 +67,19 @@ const styles = StyleSheet.create({
   heroCard: {
     backgroundColor: colors.card,
     borderRadius: 20,
-    padding: 16,
+    padding: 18,
     borderWidth: 1,
     borderColor: colors.border,
     flexDirection: 'row',
     gap: 14,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 8 },
-    shadowOpacity: 0.08,
-    shadowRadius: 16,
-    elevation: 3,
+    shadowColor: '#0b3a42',
+    shadowOffset: { width: 0, height: 10 },
+    shadowOpacity: 0.06,
+    shadowRadius: 18,
+    elevation: 2,
   },
   heroImage: {
-    backgroundColor: '#c6d8ff',
+    backgroundColor: '#d4f0ef',
     borderRadius: 16,
     width: 120,
     height: 160,
@@ -90,17 +91,13 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   heroLabel: {
-    fontSize: 14,
-    fontWeight: '700',
-    color: colors.mutedText,
-    textTransform: 'uppercase',
-    letterSpacing: 1,
+    ...typography.label,
+    color: colors.accent,
   },
   heroTitle: {
-    fontSize: 26,
-    fontWeight: '800',
-    color: colors.text,
-    lineHeight: 32,
+    ...typography.heading,
+    fontSize: 30,
+    lineHeight: 36,
   },
   heroButton: {
     backgroundColor: colors.primary,
@@ -108,23 +105,26 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 18,
     alignSelf: 'flex-start',
+    shadowColor: '#0b3a42',
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.12,
+    shadowRadius: 10,
   },
   heroButtonText: {
-    color: '#ffffff',
-    fontWeight: '700',
-    fontSize: 16,
+    ...typography.button,
   },
   banner: {
-    backgroundColor: '#fef3c7',
+    backgroundColor: '#dff4f3',
     padding: 12,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#fde68a',
+    borderColor: '#c8e7e4',
     alignItems: 'center',
   },
   bannerText: {
-    color: colors.text,
-    fontWeight: '700',
+    ...typography.body,
+    fontFamily: 'Inter_600SemiBold',
+    color: colors.textPrimary,
   },
   grid: {
     flexDirection: 'row',

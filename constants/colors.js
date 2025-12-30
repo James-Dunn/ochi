@@ -1,13 +1,12 @@
-// Color palette for the app. Keeping this in one place makes it easy to tweak
-// the look without hunting through multiple files.
+// Deep-teal inspired palette for the brand system.
 export const colors = {
-  background: '#f1f4f9',
-  primary: '#4a67f5',
-  text: '#111827',
-  mutedText: '#4b5563',
+  primary: '#0F4C5C',
+  primaryDark: '#0B3A42',
+  background: '#F3FAF9',
+  accent: '#1CA7A6',
+  textPrimary: '#0F172A',
+  textMuted: '#6B7280',
   buttonText: '#ffffff',
   card: '#ffffff',
-  border: '#e5e7eb',
-  accent: '#f59e0b',
-  success: '#22c55e',
+  border: '#dce6e5',
 };
