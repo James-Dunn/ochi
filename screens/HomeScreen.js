@@ -11,6 +11,7 @@ import CategoryChips from '../components/CategoryChips';
 import ProductCard from '../components/ProductCard';
 import { colors } from '../constants/colors';
 import { typography } from '../constants/typography';
+import { theme } from '../src/theme';
 
 const categories = ['Tees', 'New', 'Best Sellers', 'Sale', 'Essentials'];
 
@@ -61,51 +62,54 @@ export default function HomeScreen() {
 
 const styles = StyleSheet.create({
   scrollContent: {
-    paddingBottom: 32,
-    gap: 18,
+    paddingBottom: theme.spacing.xl,
+    gap: theme.spacing.lg,
   },
   heroCard: {
     backgroundColor: colors.card,
-    borderRadius: 20,
-    padding: 18,
+    borderRadius: theme.radius.lg,
+    padding: theme.spacing.md,
     borderWidth: 1,
     borderColor: colors.border,
     flexDirection: 'row',
-    gap: 14,
-    shadowColor: '#0b3a42',
-    shadowOffset: { width: 0, height: 10 },
-    shadowOpacity: 0.06,
-    shadowRadius: 18,
-    elevation: 2,
+    gap: theme.spacing.md,
+    shadowColor: colors.shadow,
+    shadowOffset: { width: 0, height: 12 },
+    shadowOpacity: 0.08,
+    shadowRadius: 16,
+    elevation: 3,
   },
   heroImage: {
-    backgroundColor: '#d4f0ef',
-    borderRadius: 16,
+    backgroundColor: '#bfe7e1',
+    borderRadius: theme.radius.md,
     width: 120,
     height: 160,
   },
   heroTextWrapper: {
     flex: 1,
     justifyContent: 'space-between',
-    paddingVertical: 6,
-    gap: 10,
+    paddingVertical: theme.spacing.xs,
+    gap: theme.spacing.sm,
   },
   heroLabel: {
     ...typography.label,
     color: colors.accent,
+    letterSpacing: 1.4,
   },
   heroTitle: {
-    ...typography.heading,
-    fontSize: 30,
-    lineHeight: 36,
+    fontFamily: 'Inter_700Bold',
+    fontSize: theme.fontSizes.title,
+    lineHeight: 38,
+    color: colors.textPrimary,
+    letterSpacing: 0.2,
   },
   heroButton: {
     backgroundColor: colors.primary,
-    borderRadius: 12,
-    paddingVertical: 12,
-    paddingHorizontal: 18,
+    borderRadius: theme.radius.md,
+    paddingVertical: theme.spacing.sm,
+    paddingHorizontal: theme.spacing.lg,
     alignSelf: 'flex-start',
-    shadowColor: '#0b3a42',
+    shadowColor: colors.shadow,
     shadowOffset: { width: 0, height: 6 },
     shadowOpacity: 0.12,
     shadowRadius: 10,
@@ -114,11 +118,11 @@ const styles = StyleSheet.create({
     ...typography.button,
   },
   banner: {
-    backgroundColor: '#dff4f3',
-    padding: 12,
-    borderRadius: 12,
+    backgroundColor: '#d3efea',
+    padding: theme.spacing.sm,
+    borderRadius: theme.radius.md,
     borderWidth: 1,
-    borderColor: '#c8e7e4',
+    borderColor: '#c1e4dd',
     alignItems: 'center',
   },
   bannerText: {
