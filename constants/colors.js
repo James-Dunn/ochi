@@ -1,12 +1,15 @@
-// Deep-teal inspired palette for the brand system.
+// Soft teal-inspired palette centralized via the shared theme.
+import { theme } from '../src/theme';
+
 export const colors = {
-  primary: '#0F4C5C',
-  primaryDark: '#0B3A42',
-  background: '#F3FAF9',
-  accent: '#1CA7A6',
-  textPrimary: '#0F172A',
-  textMuted: '#6B7280',
-  buttonText: '#ffffff',
-  card: '#ffffff',
-  border: '#dce6e5',
+  primary: theme.colors.primary,
+  primaryDark: theme.colors.primaryDark,
+  background: theme.colors.background,
+  accent: theme.colors.accent,
+  textPrimary: theme.colors.textPrimary,
+  textMuted: theme.colors.textMuted,
+  buttonText: theme.colors.buttonText,
+  card: theme.colors.surface,
+  border: theme.colors.border,
+  shadow: theme.colors.shadow,
 };
